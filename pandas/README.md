@@ -5,4 +5,5 @@
 <code>% gem install cocoapods</code><br>
 <code>% pod setup</code><br>
 Rubymotion用のgemをインストールする。<br>
-<code>% gem install motion-cocoapods</code>
+<code>% gem install motion-cocoapods</code><br>
+![Screen Captures](http://blog.marsbar.us/images/upload/sc_2012-11-11184552.png)
