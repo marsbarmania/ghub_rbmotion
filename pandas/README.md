@@ -1,6 +1,6 @@
 ## Rubymotion with Cocoapods Sample
 
-Install & Setup
+Install & Setup<br>
 <code>
 % gem install cocoapods<br>
 % pod setup
