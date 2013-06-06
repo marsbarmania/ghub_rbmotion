@@ -1,0 +1,16 @@
+PODS:
+  - JSONKit (1.5pre)
+  - Reachability (3.1.0)
+  - SVProgressHUD (0.8)
+
+DEPENDENCIES:
+  - JSONKit
+  - Reachability
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
+  Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  SVProgressHUD: 51042a14e3a716efdbdd73cbb2181fb23ee94389
+
+COCOAPODS: 0.20.2

@@ -1,0 +1,434 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<opaque type='^{JKParseState=}' name='JKParseState'/>
+<constant type='@' name='kReachabilityChangedNotification' const='true' declared_type='NSString*'/>
+<enum value='1' name='JKParseOptionComments'/>
+<enum value='4' name='JKParseOptionLooseUnicode'/>
+<enum value='0' name='JKParseOptionNone'/>
+<enum value='8' name='JKParseOptionPermitTextAfterValidJSON'/>
+<enum value='0' name='JKParseOptionStrict'/>
+<enum value='2' name='JKParseOptionUnicodeNewlines'/>
+<enum value='15' name='JKParseOptionValidFlags'/>
+<enum value='16' name='JKSerializeOptionEscapeForwardSlashes'/>
+<enum value='2' name='JKSerializeOptionEscapeUnicode'/>
+<enum value='0' name='JKSerializeOptionNone'/>
+<enum value='1' name='JKSerializeOptionPretty'/>
+<enum value='19' name='JKSerializeOptionValidFlags'/>
+<enum value='1' name='JSONKIT_VERSION_MAJOR'/>
+<enum value='4' name='JSONKIT_VERSION_MINOR'/>
+<enum value='0' name='NEEDS_DISPATCH_RETAIN_RELEASE'/>
+<enum value='0' name='NotReachable'/>
+<enum value='1' name='ReachableViaWWAN'/>
+<enum value='2' name='ReachableViaWiFi'/>
+<enum value='3' name='SVProgressHUDMaskTypeBlack'/>
+<enum value='2' name='SVProgressHUDMaskTypeClear'/>
+<enum value='4' name='SVProgressHUDMaskTypeGradient'/>
+<enum value='1' name='SVProgressHUDMaskTypeNone'/>
+<class name='JSONDecoder'>
+<method selector='clearCache'>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='decoder'>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='decoderWithParseOptions:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithParseOptions:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectWithData:'>
+<arg type='@' name='jsonData' declared_type='NSData*' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectWithData:error:'>
+<arg type='@' name='jsonData' declared_type='NSData*' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectWithUTF8String:length:'>
+<arg type='*' name='string' const='true' declared_type='unsigned char*' index='0'/>
+<arg type='I' name='length' declared_type='NSUInteger' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectWithUTF8String:length:error:'>
+<arg type='*' name='string' const='true' declared_type='unsigned char*' index='0'/>
+<arg type='I' name='length' declared_type='NSUInteger' index='1'/>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectWithData:'>
+<arg type='@' name='jsonData' declared_type='NSData*' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectWithData:error:'>
+<arg type='@' name='jsonData' declared_type='NSData*' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectWithUTF8String:length:'>
+<arg type='*' name='string' const='true' declared_type='unsigned char*' index='0'/>
+<arg type='I' name='length' declared_type='NSUInteger' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectWithUTF8String:length:error:'>
+<arg type='*' name='string' const='true' declared_type='unsigned char*' index='0'/>
+<arg type='I' name='length' declared_type='NSUInteger' index='1'/>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='parseJSONData:'>
+<arg type='@' name='jsonData' declared_type='NSData*' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='parseJSONData:error:'>
+<arg type='@' name='jsonData' declared_type='NSData*' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='parseUTF8String:length:'>
+<arg type='*' name='string' const='true' declared_type='unsigned char*' index='0'/>
+<arg type='L' name='length' declared_type='size_t' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='parseUTF8String:length:error:'>
+<arg type='*' name='string' const='true' declared_type='unsigned char*' index='0'/>
+<arg type='L' name='length' declared_type='size_t' index='1'/>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='NSArray'>
+<method selector='JSONData'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONDataWithOptions:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONDataWithOptions:serializeUnsupportedClassesUsingBlock:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@?' function_pointer='true' name='block' declared_type='id (^)(id)' index='1'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONDataWithOptions:serializeUnsupportedClassesUsingDelegate:selector:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@' name='delegate' declared_type='id' index='1'/>
+<arg type=':' name='selector' declared_type='SEL' index='2'/>
+<arg type='^@' name='error' declared_type='NSError**' index='3'/>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONString'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='JSONStringWithOptions:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='JSONStringWithOptions:serializeUnsupportedClassesUsingBlock:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@?' function_pointer='true' name='block' declared_type='id (^)(id)' index='1'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='JSONStringWithOptions:serializeUnsupportedClassesUsingDelegate:selector:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@' name='delegate' declared_type='id' index='1'/>
+<arg type=':' name='selector' declared_type='SEL' index='2'/>
+<arg type='^@' name='error' declared_type='NSError**' index='3'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</class>
+<class name='NSData'>
+<method selector='mutableObjectFromJSONData'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectFromJSONDataWithParseOptions:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectFromJSONDataWithParseOptions:error:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectFromJSONData'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectFromJSONDataWithParseOptions:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectFromJSONDataWithParseOptions:error:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='NSDictionary'>
+<method selector='JSONData'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONDataWithOptions:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONDataWithOptions:serializeUnsupportedClassesUsingBlock:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@?' function_pointer='true' name='block' declared_type='id (^)(id)' index='1'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONDataWithOptions:serializeUnsupportedClassesUsingDelegate:selector:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@' name='delegate' declared_type='id' index='1'/>
+<arg type=':' name='selector' declared_type='SEL' index='2'/>
+<arg type='^@' name='error' declared_type='NSError**' index='3'/>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONString'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='JSONStringWithOptions:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='JSONStringWithOptions:serializeUnsupportedClassesUsingBlock:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@?' function_pointer='true' name='block' declared_type='id (^)(id)' index='1'>
+<arg type='@' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</arg>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='JSONStringWithOptions:serializeUnsupportedClassesUsingDelegate:selector:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='@' name='delegate' declared_type='id' index='1'/>
+<arg type=':' name='selector' declared_type='SEL' index='2'/>
+<arg type='^@' name='error' declared_type='NSError**' index='3'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</class>
+<class name='NSString'>
+<method selector='JSONData'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONDataWithOptions:includeQuotes:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='B' name='includeQuotes' declared_type='BOOL' index='1'/>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='JSONString'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='JSONStringWithOptions:includeQuotes:error:'>
+<arg type='I' name='serializeOptions' declared_type='JKSerializeOptionFlags' index='0'/>
+<arg type='B' name='includeQuotes' declared_type='BOOL' index='1'/>
+<arg type='^@' name='error' declared_type='NSError**' index='2'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='mutableObjectFromJSONString'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectFromJSONStringWithParseOptions:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='mutableObjectFromJSONStringWithParseOptions:error:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectFromJSONString'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectFromJSONStringWithParseOptions:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='objectFromJSONStringWithParseOptions:error:'>
+<arg type='I' name='parseOptionFlags' declared_type='JKParseOptionFlags' index='0'/>
+<arg type='^@' name='error' declared_type='NSError**' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='Reachability'>
+<method selector='connectionRequired'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='currentReachabilityFlags'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='currentReachabilityStatus'>
+<retval type='i' declared_type='NetworkStatus'/>
+</method>
+<method selector='currentReachabilityString'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='initWithReachabilityRef:'>
+<arg type='^{__SCNetworkReachability=}' name='ref' declared_type='SCNetworkReachabilityRef' index='0'/>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method selector='isConnectionOnDemand'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isConnectionRequired'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isInterventionRequired'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isReachable'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isReachableViaWWAN'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isReachableViaWiFi'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='reachabilityFlags'>
+<retval type='I' declared_type='SCNetworkReachabilityFlags'/>
+</method>
+<method class_method='true' selector='reachabilityForInternetConnection'>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method class_method='true' selector='reachabilityForLocalWiFi'>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method class_method='true' selector='reachabilityWithAddress:'>
+<arg type='^{sockaddr_in=CCS{in_addr=I}[8c]}' name='hostAddress' const='true' declared_type='struct sockaddr_in*' index='0'/>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method class_method='true' selector='reachabilityWithHostname:'>
+<arg type='@' name='hostname' declared_type='NSString*' index='0'/>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method selector='reachableBlock'>
+<retval type='@?' function_pointer='true' declared_type='NetworkReachable'>
+<arg type='@' declared_type='Reachability*'/>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+<method selector='reachableOnWWAN'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setReachableBlock:'>
+<arg type='@?' function_pointer='true' name='reachableBlock' declared_type='NetworkReachable' index='0'>
+<arg type='@' declared_type='Reachability*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setReachableOnWWAN:'>
+<arg type='B' name='reachableOnWWAN' declared_type='BOOL' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setUnreachableBlock:'>
+<arg type='@?' function_pointer='true' name='unreachableBlock' declared_type='NetworkUnreachable' index='0'>
+<arg type='@' declared_type='Reachability*'/>
+<retval type='v' declared_type='void'/>
+</arg>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='startNotifier'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='stopNotifier'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='unreachableBlock'>
+<retval type='@?' function_pointer='true' declared_type='NetworkUnreachable'>
+<arg type='@' declared_type='Reachability*'/>
+<retval type='v' declared_type='void'/>
+</retval>
+</method>
+</class>
+<class name='SVProgressHUD'>
+<method class_method='true' selector='dismiss'>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='dismissWithError:'>
+<arg type='@' name='errorString' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='dismissWithError:afterDelay:'>
+<arg type='@' name='errorString' declared_type='NSString*' index='0'/>
+<arg type='d' name='seconds' declared_type='NSTimeInterval' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='dismissWithSuccess:'>
+<arg type='@' name='successString' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='dismissWithSuccess:afterDelay:'>
+<arg type='@' name='successString' declared_type='NSString*' index='0'/>
+<arg type='d' name='seconds' declared_type='NSTimeInterval' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='isVisible'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method class_method='true' selector='setStatus:'>
+<arg type='@' name='string' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='show'>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showErrorWithStatus:'>
+<arg type='@' name='string' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showErrorWithStatus:duration:'>
+<arg type='@' name='string' declared_type='NSString*' index='0'/>
+<arg type='d' name='duration' declared_type='NSTimeInterval' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showImage:status:'>
+<arg type='@' name='image' declared_type='UIImage*' index='0'/>
+<arg type='@' name='status' declared_type='NSString*' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showSuccessWithStatus:'>
+<arg type='@' name='string' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showSuccessWithStatus:duration:'>
+<arg type='@' name='string' declared_type='NSString*' index='0'/>
+<arg type='d' name='duration' declared_type='NSTimeInterval' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showWithMaskType:'>
+<arg type='I' name='maskType' declared_type='SVProgressHUDMaskType' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showWithStatus:'>
+<arg type='@' name='status' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='showWithStatus:maskType:'>
+<arg type='@' name='status' declared_type='NSString*' index='0'/>
+<arg type='I' name='maskType' declared_type='SVProgressHUDMaskType' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+</signatures>

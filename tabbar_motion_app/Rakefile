@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project/template/ios'
+require 'motion-cocoapods'
+require 'bubble-wrap/http'
+require 'bubble-wrap/core'
+require 'bubble-wrap/ui'
+require 'bubble-wrap/camera'
+
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings.
+  app.name = 'photo_apis'
+  app.identifier = 'us.marsbar.cocoapods'
+  app.frameworks += ['QuartzCore']
+  app.pods do
+    pod 'JSONKit'
+    pod 'Reachability'
+    pod 'SVProgressHUD'
+  end
+end
