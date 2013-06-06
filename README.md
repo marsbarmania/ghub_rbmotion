@@ -1,1 +1,1 @@
-## Rubymotion Samples
+# Rubymotion Sample Code
