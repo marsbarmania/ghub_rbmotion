@@ -74,7 +74,6 @@ class TopViewController < UIViewController
 
   end
 
-  # https://github.com/samvermette/SVProgressHUD
   def showProgress
 
     unless block_given?
@@ -91,7 +90,6 @@ class TopViewController < UIViewController
       SVProgressHUD.dismiss
     else
       SVProgressHUD.showSuccessWithStatus "#{yield}"
-      # SVProgressHUD.showErrorWithStatus("Failed with Error")
     end
 
 
