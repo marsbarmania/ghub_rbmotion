@@ -1,7 +1,8 @@
 ## Rubymotion with Cocoapods Sample
 
-Install & Setup<br>
+####インストールとセットアップ
 
 <code>% gem install cocoapods</code><br>
 <code>% pod setup</code>
-
+Rubymotion用のgemをインストールする。
+<code>% gem install motion-cocoapods</code>
