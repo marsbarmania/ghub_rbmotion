@@ -9,8 +9,8 @@ class Photo
         self.send((key.to_s + "=").to_s, value)
       end
     }
-    @small_image = nil
-    @normal_image = nil
+    
+    @small_image, @normal_image = nil, nil
   end
 
 end
